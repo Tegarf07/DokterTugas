@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    max-width: 425px;
+    /* height: 10000rem; */
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    background-color: rgba(83, 83, 89, 0.127);
+}
+.all {
+    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    position: relative;
+}
+/* Navbar */
+.container_navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.container_navbar nav {
+    width: 100%;
+    padding: 1rem 1rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 0px 0px 20px 20px;
+    border-bottom: 2px solid aqua;
+}
+.container_navbar .logo {
+    animation: logoanimation 5s ease-in infinite alternate-reverse;
+}
+.container_navbar nav ul {
+    position: absolute;
+    height: 100vh;
+    right: 0rem;
+    top: 3.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 50%;
+    box-sizing: border-box;
+    border-left: 1px solid aqua;
+    border-radius: 2rem 0 0 2rem;
+    padding: 2rem;
+    list-style: none;
+    background-color: #ffffffa3;
+}
+.container_navbar nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.container_navbar nav ul li:hover a {
+    color: rgb(5, 93, 93);
+    font-size: 1.1rem;
+    transition: all 3ms ease;
+}
+.navbar {
+    transform: translate(300px);
+    transition: transform .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.container_navbar .open {
+    transform: translate(0);
+}
+/* content */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content-1 {
+    display: flex;
+}
+.animasi {
+    z-index: -1;
+}
+.greeting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.greeting p {
+    font-size: .5rem;
+}
+.greeting span {
+    display: none;
+}
+.content-2 {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+.content-2 .apa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.content-2 p,
+.genap,
+.ganjil {
+    background-color: rgba(149, 149, 154, 0.127);
+    padding: .5rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 0px 3px black;
+}
+.Kenapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 98%;
+    gap: 1rem;
+}
+section {
+    display: flex;
+}
+.Kenapa .genap {
+    align-self: flex-start;
+    width: 60%;
+}
+.Kenapa .ganjil {
+    align-self: flex-end;
+    width: 60%;
+}
+.logo1 {
+    width: 30%;
+    text-align: end;
+    margin-top: 1rem;
+    padding-right: 1rem;
+}
+.logo2 {
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+section i {
+    color: rgb(8, 176, 176);
+}
+.btn{
+    background-color: aqua;
+    padding: .5rem 1rem;
+    margin-top: -1rem;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    animation: btnanimation 15s ease-in infinite alternate-reverse;
+}
+.slides {
+    width: 98%;
+    position: relative;
+    margin: 1rem auto;
+}
+.slides .slide {
+    display: none;
+}
+.slides .slide img {
+    width: 100%;
+    animation: fade 1s;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.464);
+}
+.slides .navigation {
+    position: absolute;
+    top: 50%;
+    /* left:50%; */
+    /* transform: translatex(-50%,-50%); */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.slides .navigation .prev,
+.slides .navigation .next {
+    padding: .5rem;
+    color: rgb(255, 255, 255);
+    background-color: rgba(11, 240, 240, 0.2);
+    user-select: none;
+    transition: 0.6 ease;
+}
+.slides .navigation .prev:hover,
+.slides .navigation .next:hover {
+    background-color: rgb(12, 199, 228);
+}
+.contact .btn2 {
+    padding: .5rem 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    background-color: aqua;
+    border-radius:20px ;
+    color: black;
+    transition: .3s ease;
+}
+.btn:hover,.btn2:hover {
+    background-color: #3905f6;
+}
+.annouce {
+    color: red;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    animation: announce 10s ease-in-out infinite;
+}
+.contact p {
+    color: red;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+footer {
+    margin-top: 10rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: black;
+    color: rgb(14, 250, 234);
+    border-top: 1px solid aqua;
+}
+/* responsif */
+/* animation */
+@keyframes logoanimation {
+    0% {
+        text-shadow: .3px .3px aquamarine;
+    }
+
+    50% {
+        text-shadow: -.3px -.3px aqua;
+    }
+
+    100% {
+        text-shadow: .3px .3px aqua;
+    }
+}
+@keyframes btnanimation {
+    0% {
+        background-color: rgb(0, 255, 255);
+    }
+
+    25% {
+        background-color: rgb(0, 191, 255);
+    }
+
+    50% {
+        background-color: rgb(0, 140, 255);
+    }
+
+    100% {
+        background-color: rgb(0, 187, 255);
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes announce {
+    from {
+        transform: translateX(-101%);
+    }
+    to {
+        transform: translateX(+150%);
+    }
+}
+@media (min-width:768px) {
+    .container_navbar {
+        position: sticky;
+}
